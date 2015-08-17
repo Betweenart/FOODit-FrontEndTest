@@ -1,8 +1,28 @@
+<h3 class="menuTitle">Menu</h3>
 <ul class="meals">
     <li class="meal" ng-repeat="meal in menu.meals">
-        <h4 class="name">{{meal.name}}</h4>
-        <img class="image" ng-src="{{meal.primaryImageUrl}}">
-        <p class="description">{{meal.description}}</p>
-        <p class="price">{{meal.price}}</p>
+        <div class="mealHead">
+            <div class="priceWrap">
+                <p class="price">{{meal.price | currency:'\u00A3'}}</p>
+            </div>
+            <h4 class="name">{{meal.name}}</h4>
+            <img class="curve" src="images/meal-card__curve.svg" alt="meal curve"/>
+            <img class="image" ng-src="{{meal.primaryImageUrl}}">
+            <img class="curveCut" src="images/meal-card__curve.svg" alt="meal curve"/>
+
+            <div class="dots">
+                <div class="dot"></div>
+                <div class="dot lila"></div>
+                <div class="dot darkGray"></div>
+            </div>
+        </div>
+
+        <div class="underImage">
+            <p class="description lastLineElipsis">{{meal.description}}</p>
+
+            <a href="#add" class="add-order">Add To Your Order</a>
+
+            <small class="availability">3 options available</small>
+        </div>
     </li>
 </ul>

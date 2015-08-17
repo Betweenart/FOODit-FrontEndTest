@@ -1,2 +1,28 @@
+@import '../../bower_components/normalize.scss/normalize';
+@import 'colors';
 @import 'scales';
 @import 'typography';
+@import 'meals';
+
+.body {
+    background: $color-gray-light;
+}
+
+header {
+    background: $color-red;
+    width: 100%;
+    padding: 0.2rem 2%;
+    text-align: center;
+}
+
+footer {
+    background: $color-gray-dark;
+    color: $color-gray-light;
+    font-size: 0.5em;
+    text-align: center;
+    width: 100%;
+
+    p {
+        padding: 0.4em 1em;
+    }
+}
